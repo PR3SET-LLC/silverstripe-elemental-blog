@@ -1,5 +1,5 @@
 {
-    "name": "dynamic/silverstripe-elemental-blog",
+    "name": "pr3set-llc/silverstripe-elemental-blog",
     "description": "Show recent posts from a featured blog.",
     "license": "BSD-3-Clause",
     "type": "silverstripe-vendormodule",
@@ -17,15 +17,21 @@
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "dnadesign/silverstripe-elemental": "^5.0",
         "sheadawson/silverstripe-dependentdropdownfield": "^3.0",
-        "silverstripe/framework": "^5.0",
-        "silverstripe/blog": "^4.0"
+        "silverstripe/framework": "^5",
+        "silverstripe/blog": "^4"
+    },
+    "conflict": {
+        "silverstripe/framework": "<5 || >=6"
+    },
+    "replace": {
+        "dynamic/silverstripe-elemental-blog": "*"
     },
     "require-dev": {
         "silverstripe/recipe-testing": "^3",
-        "silverstripe/widgets": "^3.0",
+        "silverstripe/widgets": "^3",
         "squizlabs/php_codesniffer": "^3.0",
         "silverstripe/standards": "^1"
     },
@@ -44,6 +50,11 @@
             "silverstripe/recipe-plugin": true
         },
         "process-timeout": 600
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-5.x": "5.x-dev"
+        }
     },
     "scripts": {
         "lint": "vendor/bin/phpcs src/ tests/",
