@@ -27,7 +27,7 @@
         "silverstripe/framework": "<5 || >=6"
     },
     "replace": {
-        "dynamic/silverstripe-collection": "*"
+        "dynamic/silverstripe-elemental-blog": "*"
     },
     "require-dev": {
         "silverstripe/recipe-testing": "^3",
@@ -51,13 +51,13 @@
         },
         "process-timeout": 600
     },
-    "scripts": {
-        "lint": "vendor/bin/phpcs src/ tests/",
-        "lint-clean": "vendor/bin/phpcbf src/ tests/"
-    },
     "extra": {
         "branch-alias": {
             "dev-5.x": "5.x-dev"
         }
+    },
+    "scripts": {
+        "lint": "vendor/bin/phpcs src/ tests/",
+        "lint-clean": "vendor/bin/phpcbf src/ tests/"
     }
 }
