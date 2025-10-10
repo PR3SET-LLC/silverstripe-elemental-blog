@@ -17,14 +17,14 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "dnadesign/silverstripe-elemental": "^5.0",
-        "sheadawson/silverstripe-dependentdropdownfield": "^3.0",
-        "silverstripe/framework": "^5",
-        "silverstripe/blog": "^4"
+        "php": "^8.3",
+        "silverstripe/framework": "^6",
+        "silverstripe/blog": "^5",
+        "dnadesign/silverstripe-elemental": "^6",
+        "sheadawson/silverstripe-dependentdropdownfield": "^4"
     },
     "conflict": {
-        "silverstripe/framework": "<5 || >=6"
+        "silverstripe/framework": "<6 || >=7"
     },
     "replace": {
         "dynamic/silverstripe-elemental-blog": "*"
@@ -53,7 +53,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-5.x": "5.x-dev"
+            "dev-6.x": "6.x-dev"
         }
     },
     "scripts": {
