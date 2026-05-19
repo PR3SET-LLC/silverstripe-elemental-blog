@@ -9,7 +9,6 @@ use Page;
 use PageController as BasePageController;
 use SilverStripe\Blog\Model\BlogController;
 use SilverStripe\Dev\SapphireTest;
-use SilverStripe\ORM\ValidationException;
 use SilverStripe\Widgets\Extensions\WidgetPageExtension;
 
 /**
@@ -40,7 +39,6 @@ class ElementBlogOverviewFunctionalTest extends SapphireTest
     ];
 
     /**
-     * @throws ValidationException
      */
     public function testPaginatedListAvailable(): void
     {
@@ -55,7 +53,6 @@ class ElementBlogOverviewFunctionalTest extends SapphireTest
     }
 
     /**
-     * @throws ValidationException
      */
     public function testPaginatedListDenied(): void
     {
@@ -68,7 +65,6 @@ class ElementBlogOverviewFunctionalTest extends SapphireTest
     }
 
     /**
-     * @throws ValidationException
      */
     public function testPaginatedListCustom(): void
     {
@@ -84,7 +80,6 @@ class ElementBlogOverviewFunctionalTest extends SapphireTest
     }
 
     /**
-     * @throws ValidationException
      */
     public function testPaginatedListDefault(): void
     {

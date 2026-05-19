@@ -13,7 +13,6 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\ORM\DataList;
 use SilverStripe\ORM\PaginatedList;
-use SilverStripe\ORM\ValidationException;
 use SilverStripe\Widgets\Extensions\WidgetPageExtension;
 use SilverStripe\Widgets\Model\WidgetArea;
 
@@ -253,7 +252,6 @@ class ElementBlogOverview extends BaseElement
      *
      * @param Controller|null $controller
      * @return PaginatedList|null
-     * @throws ValidationException
      */
     public function getPaginatedList(?Controller $controller = null): ?PaginatedList
     {
@@ -308,7 +306,6 @@ class ElementBlogOverview extends BaseElement
 
     /**
      * @return DataList
-     * @throws ValidationException
      */
     public function getBlogPosts(): ?DataList
     {
@@ -356,7 +353,6 @@ class ElementBlogOverview extends BaseElement
 
     /**
      * @return WidgetArea|null
-     * @throws ValidationException
      */
     public function SideBarView(): ?WidgetArea
     {

@@ -8,7 +8,6 @@ use Page;
 use SilverStripe\Blog\Model\Blog;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\ORM\DataList;
-use SilverStripe\ORM\ValidationException;
 use SilverStripe\Widgets\Extensions\WidgetPageExtension;
 use SilverStripe\Widgets\Model\Widget;
 use SilverStripe\Widgets\Model\WidgetArea;
@@ -61,7 +60,6 @@ class ElementBlogOverviewTest extends SapphireTest
      * This Block is on a non Blog page, and we have not allowed this type of Block to be used on other page types, so,
      * it should just return null
      *
-     * @throws ValidationException
      */
     public function testGetBlogPostsDenied(): void
     {
@@ -75,7 +73,6 @@ class ElementBlogOverviewTest extends SapphireTest
      * This Block has been added to a (test only) Page, and our config is going to be set to allow that. We should
      * expect that the custom getBlogPosts() method on the (test only) Page returns an empty DataList
      *
-     * @throws ValidationException
      */
     public function testGetBlogPostsCustom(): void
     {
@@ -93,7 +90,6 @@ class ElementBlogOverviewTest extends SapphireTest
      * This Block has been added to a standard Page, and our config is going to be set to allow that. We should
      * expect that the we are simply returned a DataList of all available BlogPosts in the DB
      *
-     * @throws ValidationException
      */
     public function testGetBlogPostsDefault(): void
     {
@@ -111,7 +107,6 @@ class ElementBlogOverviewTest extends SapphireTest
      * Test that the Block successfully returns the Widgets when it is assigned to a page which is using it's own
      * SideBar and widgets
      *
-     * @throws ValidationException
      */
     public function testSideBarView(): void
     {
@@ -142,7 +137,6 @@ class ElementBlogOverviewTest extends SapphireTest
      * Test that the Block successfully returns the Widgets when it is assigned to a page which is inheriting its
      * SideBar from its Parent page
      *
-     * @throws ValidationException
      */
     public function testSideBarViewInheriting(): void
     {
@@ -173,7 +167,6 @@ class ElementBlogOverviewTest extends SapphireTest
      * This Block has been added to a standard Page, but our config states that these Block types are not allowed
      * outside of the Blog, so, we should simply get null
      *
-     * @throws ValidationException
      */
     public function testSideBarDenied(): void
     {
@@ -187,7 +180,6 @@ class ElementBlogOverviewTest extends SapphireTest
      * This Block has been added to a (test only) Page, and our config is going to be set to allow that. We should
      * expect that the custom SideBarView() method on the (test only) Page returns a WidgetArea
      *
-     * @throws ValidationException
      */
     public function testSideBarCustom(): void
     {
@@ -201,7 +193,6 @@ class ElementBlogOverviewTest extends SapphireTest
     }
 
     /**
-     * @throws ValidationException
      */
     public function testSideBarNoParent(): void
     {
